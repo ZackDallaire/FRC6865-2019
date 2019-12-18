@@ -212,6 +212,9 @@ public class Robot extends TimedRobot {
     else {
       arm.set(0);
     }
+    
+ 
+    	
 } // end teleopPeriodic
 
   /**
