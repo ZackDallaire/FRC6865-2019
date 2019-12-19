@@ -51,5 +51,12 @@ public class Robot extends TimedRobot {
 	private Joystick bigJ = new Joystick(1);
 	private Joystick xBox = new Joystick(0);
 	
+	// Constraints can be changed if nessory
+	private final double deadZone =0.6;
+	
+	// This is the timer
+	private Timer time = new Timer();
+	
+
 }
 
