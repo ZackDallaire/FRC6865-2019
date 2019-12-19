@@ -28,11 +28,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 */
 
 public class Robot extends TimedRobot {
-	int Sparktype1;
-	                                                                                                                                                                                                                                                                                                                                                                 
-	Sparktype1 = 0;
-	
-	if Sparktype1 == 1 {
+
 		
 		// This is if we need a certian one used instead of the ones that we required.
 		private Spark feed = new Spark(2);
@@ -42,7 +38,7 @@ public class Robot extends TimedRobot {
 		
 		
 		
-	}
+
 	
 	// This should always stay the same 
 	private Spark feed = new Spark(2);
@@ -50,5 +46,10 @@ public class Robot extends TimedRobot {
 	
 	private DiffrentialDrive move = New DifferentialDrive(new Spark (0) new Spark (1));
 
+	// These are the Joysticks
+	
+	private Joystick bigJ = new Joystick(1);
+	private Joystick xBox = new Joystick(0);
 	
 }
+
