@@ -17,7 +17,38 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /** 
 
-* This Program has some parts for the 2018 Program as it was used a basis but not the whole thing.abstract
+* This Program has some parts for the 2018 Program as it was used a basis but not the whole thing
 
 * If you have any problems speak to Zachary Dallaire
 */
+
+
+
+/** This VM is Configured to automatically run this class and to call the functions with it
+*/
+
+public class Robot extends TimedRobot {
+	int Sparktype1;
+	
+	Sparktype1 = 1;
+	
+	if Sparktype1 == 1 {
+		
+		// This is if we need a certian one used instead of the ones that we required.
+		private Spark feed = new Spark(2);
+		private Spark bucket = new Spark (5);
+		private Spark arm = new Spark (6);
+		
+		
+		
+		
+	}
+	
+	// This should always stay the same 
+	private Spark feed = new Spark(2);
+	// Drive Station controls 
+	
+	private DiffrentialDrive move = New DifferentialDrive(new Spark (0) new Spark (1));
+
+	
+}
