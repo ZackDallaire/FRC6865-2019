@@ -29,8 +29,8 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 public class Robot extends TimedRobot {
 	int Sparktype1;
-	
-	Sparktype1 = 1;
+	                                                                                                                                                                                                                                                                                                                                                                 
+	Sparktype1 = 0;
 	
 	if Sparktype1 == 1 {
 		
