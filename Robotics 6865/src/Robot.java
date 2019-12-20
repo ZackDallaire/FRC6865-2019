@@ -17,7 +17,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /** 
 
-* This Program has some parts for the 2018 Program as it was used a basis but not the whole thing
+* This Program has some parts for the 2019 Program as it was used a basis but not the whole thing
 
 * If you have any problems speak to Zachary Dallaire
 */
