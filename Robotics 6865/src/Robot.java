@@ -57,6 +57,18 @@ public class Robot extends TimedRobot {
 	// This is the timer
 	private Timer time = new Timer();
 	
-
+	/** The following function is used to first start up the robot and should be used for any Initalization Code 
+	 * 
+	 */
+	
+@overide
+public void robotinit() {
+	// You can change the drive power with the following settings
+	
+	// Bucket Power and also arm power will be in a different part of this program
+	SmartDashboard.putNumber("DrivePower", 0.82);
+	SmartDashboard.putNumber("Increment", 0.05);
+	SmartDashboard.putNumber("RollerPower", 0.05);
+}
 }
 
