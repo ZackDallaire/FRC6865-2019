@@ -91,14 +91,14 @@ public void robotPeriodic() {
 }
 /** 
  * The Autonomouse (along with the chooser code above) shows how to select 
- * between diffrent autonomous modes using the dashboard. The sendable
+ * between different autonomous modes using the dashboard. The sendable
  * chooser code workss with the Java SmartDashboard. If you prefer the 
  * LabView Dasshboard, remove all the chooser code and uncomment the
  * getString line to get the auto name from the text box below the Gyro
  * 
- * <p> You can add additonal by adding additional comparisonss to
- * the switch turture below with additional sstringss. If using the
- * SendableChooser make ssure to add them to the chooser code above as well.
+ * <p> You can add additional by adding additional comparison's to
+ * the switch sturture below with additional strings. If using the
+ * SendableChooser make sure to add them to the chooser code above as well.
  */
 
 @Override
