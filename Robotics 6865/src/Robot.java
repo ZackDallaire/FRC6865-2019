@@ -65,10 +65,33 @@ public class Robot extends TimedRobot {
 public void robotinit() {
 	// You can change the drive power with the following settings
 	
-	// Bucket Power and also arm power will be in a different part of this program
+	// Bucket Power and also arm power will be in a different part of this program or based on when the design gets better
+	
 	SmartDashboard.putNumber("DrivePower", 0.82);
 	SmartDashboard.putNumber("Increment", 0.05);
 	SmartDashboard.putNumber("RollerPower", 0.05);
+	
+	//The following code allows the Automatic Capture of the camera.
+	
+	CameraServer.getinstance().startAutomaticCapture();
 }
+
+/** This fuction is called every robot packet, no matter the mode. Use this for items like diagnostics
+ * that you want to ran disabled, Autonoumus, teleoperated and test
+ * 
+ * <p> This runs after the mode specific perodic functions but before 
+ * Live Window and SmartDashboard intergrated updating
+ */
+
+
+
+@Overide
+public void robotPeriodic() {
+	
 }
+
+
+}
+
+
 
