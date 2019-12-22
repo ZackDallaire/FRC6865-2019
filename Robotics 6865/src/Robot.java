@@ -61,7 +61,7 @@ public class Robot extends TimedRobot {
 	 * 
 	 */
 	
-@overide
+@Override
 public void robotinit() {
 	// You can change the drive power with the following settings
 	
@@ -85,10 +85,27 @@ public void robotinit() {
 
 
 
-@Overide
+@Override
 public void robotPeriodic() {
 	
 }
+/** 
+ * The Autonomouse (along with the chooser code above) shows how to select 
+ * between diffrent autonomous modes using the dashboard. The sendable
+ * chooser code workss with the Java SmartDashboard. If you prefer the 
+ * LabView Dasshboard, remove all the chooser code and uncomment the
+ * getString line to get the auto name from the text box below the Gyro
+ * 
+ * <p> You can add additonal by adding additional comparisonss to
+ * the switch turture below with additional sstringss. If using the
+ * SendableChooser make ssure to add them to the chooser code above as well.
+ */
+
+@Override
+public void autonomousInit(){
+	time.start();
+}
+
 
 
 }
