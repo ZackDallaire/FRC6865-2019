@@ -21,7 +21,10 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 * If you have any problems speak to Zachary Dallaire
 */
-
+/** Program done by :
+ * Zachary Dallaire
+ * 
+ */
 
 
 /** This VM is Configured to automatically run this class and to call the functions with it
