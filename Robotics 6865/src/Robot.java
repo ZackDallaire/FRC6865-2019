@@ -108,8 +108,22 @@ public void robotPeriodic() {
 public void autonomousInit(){
 	time.start();
 }
+/*
+ * if(time.get() <==3.7){
+ * move.arcadeDrive(-0.6,0)
+ * }
+ */
 
+//get table values 
 
+double armPower= SmartDashboard.getNumber("ArmPower", 0.7);
+double buckePower = SmartDashboard.getNumber("bucketPower", -0.45);
+double rollerPower = SmartDashboard.getNumber("RollerPower", 0.6);
+double drivePower = SmartDashboard.getNumber("DriverPower", 0.05);
+
+feed.setSafteyEnable(false);
+bucket.SetSafteyEnable(false);
+arm.setSafteyEnable(false);
 
 }
 
