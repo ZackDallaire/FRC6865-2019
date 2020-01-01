@@ -126,6 +126,12 @@ bucket.SetSafteyEnable(false);
 arm.setSafteyEnable(false);
 
 }
+// #######################DRIVE BASE #################################
 
-
+if( mave.abs(bigJ.getY()) > deadZone || Math.abs(bigJ.getX()) >deadZone) {
+	move.arcadeDrvie(bigJ.getY()*drivePower,bigJ.getX()*drivePower);
+}
+else {
+	move.arcadeDrive(0.0)
+}
 
