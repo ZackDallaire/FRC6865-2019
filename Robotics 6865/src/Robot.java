@@ -126,7 +126,7 @@ feed.setSafteyEnable(false);
 bucket.SetSafteyEnable(false);
 arm.setSafteyEnable(false);
 
-}
+
 // #######################DRIVE BASE #################################
 
 if( mave.abs(bigJ.getY()) > deadZone || Math.abs(bigJ.getX()) >deadZone) {
@@ -168,5 +168,8 @@ if (Math.abs(xBox.getRawAxis(5)) > deadZone) {
 else {
 	arm.set(0);
 }
-
+}
 //############# END OF PrevAuto ###################
+
+
+
