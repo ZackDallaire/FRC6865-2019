@@ -148,3 +148,13 @@ else if(xBox.getRawButton(5) == 6) {
 	feed.set(rollerPower);
 }
 
+//################################ Bucket ########################
+
+if((Math.abs(xBox.getY())) > deadZone) {
+	bucket.set(xBox.getY()*bucketPower);
+}
+else {
+	bucket.set(0);
+}
+
+
