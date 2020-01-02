@@ -133,5 +133,15 @@ if( mave.abs(bigJ.getY()) > deadZone || Math.abs(bigJ.getX()) >deadZone) {
 }
 else {
 	move.arcadeDrive(0.0)
+} // end drive base
+
+//####################################Rollers#######################
+
+//move the rollers in or out accoringly 
+if (xBox.getRawButton(5)==true || xBox.getRawButton(6) == true){
+	if (xBox.getBRawButton(5) == true) {
+		feed.set(rollerPower);
+	}
 }
+
 
