@@ -144,4 +144,7 @@ if (xBox.getRawButton(5)==true || xBox.getRawButton(6) == true){
 	}
 }
 
+else if(xBox.getRawButton(5) == 6) {
+	feed.set(rollerPower);
+}
 
