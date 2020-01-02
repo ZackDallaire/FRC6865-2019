@@ -157,4 +157,15 @@ else {
 	bucket.set(0);
 }
 
+//############################ ARM ###########################
 
+if (Math.abs(xBox.getRawAxis(5)) > deadZone) {
+	arm.set(xBox.getRawAxis(5)*armPower);
+	
+}
+
+else {
+	arm.set(0);
+}
+
+//############# END OF PrevAuto ###################
