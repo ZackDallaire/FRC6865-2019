@@ -184,8 +184,8 @@ public void teleopinit() {
 public void teleopPeriodic() {
 	double armPower =SmartDashboard.getNumber("ArmPower",0.7);
 	double bucketPower = SmartDashboard.getNumber("BucketPower",-45);
-	double rollerPower = SmartDashboard("RollerPower", 0.6);
-	double drivePower = SmartDashboard.("DrivePower", 0.7);
+	double rollerPower = SmartDashboard.getNumber("RollerPower", 0.6);
+	double drivePower = SmartDashboard.getNumber("DrivePower", 0.7);
 	
 	//This controls how powerful the movements are
 	
