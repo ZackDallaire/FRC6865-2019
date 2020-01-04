@@ -48,7 +48,7 @@ public class Robot extends TimedRobot {
 	private Spark feed = new Spark(2);
 	// Drive Station controls 
 	
-	private DiffrentialDrive move = New DifferentialDrive(new Spark (0) new Spark (1));
+	private DifferentialDrive move = new DifferentialDrive(new Spark (0) new Spark (1));
 
 	// These are the Joysticks
 	
