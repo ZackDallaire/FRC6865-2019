@@ -196,7 +196,7 @@ public void teleopPeriodic() {
 	// If the Joystick is past the dead zone, move the robot accordingly 
 	
 	if(Math.abs(bigJ.getY()) > deadZone || Math.abs(bigJ.getX()) > deadZone) {
-		move.arcadeDrive(bigJ.getY()*driverPower,bigJ.getX()*drivePower);
+		move.arcadeDrive(bigJ.getY()*drivePower,bigJ.getX()*drivePower);
 	}
 	
 	else {
