@@ -180,7 +180,7 @@ public void teleopinit() {
 
 //This function is called periodically during operator control 
 
-@override
+@Override
 public void teleopPeriodic() {
 	double armPower =SmartDashboard.getNumber("ArmPower",0.7);
 	double bucketPower = SmartDashboard.getNumber("BucketPower",-45);
