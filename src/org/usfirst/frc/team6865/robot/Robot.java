@@ -15,7 +15,8 @@ import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.Timer;
-import edu.wpi.first.cameraserver.CameraServer;
+import edu.wpi.first.wpilibj.CameraServer;
+import edu.wpi.first.wpilibj.CANTalon;
 
 
 public class Robot extends TimedRobot {
