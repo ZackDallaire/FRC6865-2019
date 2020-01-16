@@ -19,8 +19,9 @@ import edu.wpi.first.cameraserver.CameraServer;
 
 
 public class Robot extends TimedRobot {
-public Spark feed = new Spark(2);
-public Spark arm = new Spark(6);
+// Please change the number below once we know which one we are using.
+public Spark shoot = new Spark (1);
+
 
 // Set Joysticks 
 
