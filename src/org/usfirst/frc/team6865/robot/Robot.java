@@ -71,14 +71,25 @@ private final double deadZone = 0.05;
         // This is called periodically while the robot is in teleopreated mode
     	
     	double drivePower = SmartDashboard.getNumber('DrivePower',0.7);
-    	
+    	double shootPower = SmartDashboard.getNumber('ShootPower', 0.9);
     	// Insert Saftys once we know what were doing
+    	
+    	feed.setSafetyEnabled(false);
     	
     	if(Math.abs(bigJ.getY()) > deadZone || Math.abs(bigJ.getX()) > deadZone) {
     		move.arcadeDrive(bigJ.getY()*drivePower,bigJ.getX()*drivePower);
     	}
     	else {
     		move.arcadeDrive(0,0,);
+    	// Shooter Controls are below this 
+    		
+    		if(Math.abss(xBox.5()) > true ) {
+    		feed.set(ShootPower);
+    	}
+    	else {
+    		feed.set(0);
+    	}
+    	
     	}// End of the drive base.
     	
     	
