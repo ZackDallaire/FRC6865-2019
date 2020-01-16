@@ -22,6 +22,7 @@ import edu.wpi.first.wpilibj.Talon;
 public class Robot extends TimedRobot {
 // Please change the number below once we know which one we are using.
 public Spark shoot = new Spark (1);
+public Spark Intake = new Spark (2);
 
 
 // Set Joysticks 
@@ -40,7 +41,7 @@ private final double deadZone = 0.05;
     	SmartDashboard.putNumber("DrivePower",0.82);
     	
     	// Camera USB
-    	CameraServer.getinstance().startAutomaticCapture();
+    	CameraServer.get.instance().startAutomaticCapture();
     	
     }
 
@@ -90,6 +91,7 @@ private final double deadZone = 0.05;
     	else {
     		feed.set(0);
     	}
+    		
     	
     	}// End of the drive base.
     	
