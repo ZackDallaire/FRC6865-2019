@@ -26,7 +26,7 @@ public Spark Intake = new Spark (2);
 public Talon DrivePower = new Talon (3);
 
 
-// Set Joysticks 
+// Set Joy sticks 
 
 private Joystick bigJ = new Joystick(1);
 private Joystick xBox = new Joystick(0);
@@ -74,7 +74,7 @@ private final double deadZone = 0.05;
     public void teleopPeriodic() {
         // This is called periodically while the robot is in teleopreated mode
     	
-    	double drivePower = SmartDashboard.getNumber('DrivePower',0.7);
+    	double DrivePower = SmartDashboard.getNumber('DrivePower',0.7);
     	double shootPower = SmartDashboard.getNumber('ShootPower', 0.9);
     	double intakePower = SmartDashboard.getNumber('IntakePower',0.9);
     	
