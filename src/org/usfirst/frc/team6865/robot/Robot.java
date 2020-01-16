@@ -66,7 +66,7 @@ private final double deadZone = 0.05;
     @Override
     public void teleopInit() {
         // This is called once when the robot first enters teleoperated mode
-    	d
+    	
     }
 
     @Override
