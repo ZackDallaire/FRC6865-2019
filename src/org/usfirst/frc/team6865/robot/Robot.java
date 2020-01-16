@@ -75,6 +75,7 @@ private final double deadZone = 0.05;
     	
     	double drivePower = SmartDashboard.getNumber('DrivePower',0.7);
     	double shootPower = SmartDashboard.getNumber('ShootPower', 0.9);
+    	double intakePower = SmartDashboard.getNumber('IntakeNumber',0.9);
     	// Insert Saftys once we know what were doing
     	
     	feed.setSafetyEnabled(false);
@@ -86,13 +87,18 @@ private final double deadZone = 0.05;
     		move.arcadeDrive(0,0,);
     	// Shooter Controls are below this 
     		
-    		if(Math.abss(xBox.5()) > true ) {
+    		if(Math.abs(xBox.getRawButton(5)) > true ) {
     		feed.set(ShootPower);
     	}
     	else {
     		feed.set(0);
     	}
-    		
+    		// Intake 
+    		if (Math.abs(xBox.get4)) {
+    			feed.set(intakePower);
+    		}else {
+    			feed.set(0);
+    		}
     	
     	}// End of the drive base.
     	
