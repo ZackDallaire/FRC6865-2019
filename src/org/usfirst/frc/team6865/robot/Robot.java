@@ -75,7 +75,7 @@ private final double deadZone = 0.05;
     	
     	double drivePower = SmartDashboard.getNumber('DrivePower',0.7);
     	double shootPower = SmartDashboard.getNumber('ShootPower', 0.9);
-    	double intakePower = SmartDashboard.getNumber('IntakeNumber',0.9);
+    	double intakePower = SmartDashboard.getNumber('IntakePower',0.9);
     	// Insert Saftys once we know what were doing
     	
     	feed.setSafetyEnabled(false);
@@ -93,9 +93,9 @@ private final double deadZone = 0.05;
     	else {
     		feed.set(0);
     	}
-    		// Intake 
+    		// Intake controls
     		if (Math.abs(xBox.get4)) {
-    			feed.set(intakePower);
+    			feed.set(IntakePower);
     		}else {
     			feed.set(0);
     		}
