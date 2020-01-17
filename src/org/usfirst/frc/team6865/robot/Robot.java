@@ -36,6 +36,10 @@ private Joystick xBox = new Joystick(0);
 
 private final double deadZone = 0.05;
 
+// talon motor stuff
+
+
+
     @Override
     public void robotInit() {
         // This is called once when the robot code initializes
