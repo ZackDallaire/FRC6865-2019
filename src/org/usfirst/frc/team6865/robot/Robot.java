@@ -23,7 +23,7 @@ public class Robot extends TimedRobot {
 // Please change the number below once we know which one we are using.
 public Spark shoot = new Spark (1);
 public Spark Intake = new Spark (2);
-public Talon DrivePower = new Talon (3);
+public Spark DriverPower = new Spark (3);
 
 
 // Set Joy sticks 
@@ -78,7 +78,7 @@ private final double deadZone = 0.05;
     public void teleopPeriodic() {
         // This is called periodically while the robot is in teleopreated mode
     	
-    	double DrivePower = SmartDashboard.getNumber('DrivePower',0.7);
+    	double driverPower = SmartDashboard.getNumber('DriverPower',0.7);
     	double shootPower = SmartDashboard.getNumber('ShootPower', 0.9);
     	double intakePower = SmartDashboard.getNumber('IntakePower',0.9);
     	
