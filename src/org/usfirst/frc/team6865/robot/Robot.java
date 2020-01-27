@@ -78,7 +78,7 @@ private final double deadZone = 0.05;
     public void teleopPeriodic() {
         // This is called periodically while the robot is in teleopreated mode
     	
-    	double DrivePower = SmartDashboard.getNumber('DrivePower',0.7);
+    	double DrivePower = SmartDashboard.getNumber('DriverPower',0.7);
     	double shootPower = SmartDashboard.getNumber('ShootPower', 0.9);
     	double intakePower = SmartDashboard.getNumber('IntakePower',0.9);
     	
