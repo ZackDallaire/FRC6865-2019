@@ -75,7 +75,7 @@ private final double deadZone = 0.05;
     public void autonomousPeriodic() {
         // This is called periodically while the robot is in autonomous mode
     	switch(mode) {
-    	casea 1;
+    	case 1;
     	....
     	}
     	
