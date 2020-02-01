@@ -24,6 +24,7 @@ public class Robot extends TimedRobot {
 public Spark shoot = new Spark (1);
 public Spark Intake = new Spark (2);
 public Talon DrivePower = new Talon (3);
+public Talon Climb = new Talon (4);
 
 
 // Set Joy sticks 
@@ -81,6 +82,7 @@ private final double deadZone = 0.05;
     	double DrivePower = SmartDashboard.getNumber('DriverPower',0.7);
     	double shootPower = SmartDashboard.getNumber('ShootPower', 0.9);
     	double intakePower = SmartDashboard.getNumber('IntakePower',0.9);
+    	double ClimbPower = SmartDashboard.getNumber('ClimbPower',0.9);
     	
     	// Insert Saftys once we know what were doing
     	
@@ -105,6 +107,12 @@ private final double deadZone = 0.05;
     		}else {
     			feed.set(0);
     		}
+    		// Climbing if we get the chance
+    	if (Math.abs(xBox.get3)) {
+    		feed.set(ClimbPower);
+    	}else {
+    		feed.set(0);
+    	}
     	
     	}// End of the drive base.
     	
