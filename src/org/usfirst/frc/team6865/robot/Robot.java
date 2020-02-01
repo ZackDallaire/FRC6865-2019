@@ -25,6 +25,10 @@ public Spark shoot = new Spark (1);
 public Spark Intake = new Spark (2);
 public Talon DrivePower = new Talon (3);
 public Talon Climb = new Talon (4);
+private int mode =1;// initialize default mode
+private SendableChooser autoCommand;
+
+
 
 
 // Set Joy sticks 
@@ -48,7 +52,10 @@ private final double deadZone = 0.05;
     	
     	// Camera USB
     	CameraServer.getInstance().startAutomaticCapture();
-    	
+    	chooser = new SendableChooser();
+    	chooser.adddefault("Command 1", 1);
+    	chooser.addObject("Command 2", 2);
+    	SmartDashboard.putData("Autonomos Selector", chooser);
     }
 
     @Override
@@ -61,11 +68,17 @@ private final double deadZone = 0.05;
     @Override
     public void autonomousInit() {
         // This is called once when the robot first enters autonomous mode
+    	mode = (int) chooser.getSelected();
     }
 
     @Override
     public void autonomousPeriodic() {
         // This is called periodically while the robot is in autonomous mode
+    	switch(mode) {
+    	casea 1;
+    	....
+    	}
+    	
     	
     }
 
@@ -97,7 +110,7 @@ private final double deadZone = 0.05;
     		
     		if(Math.abs(xBox.getRawButton(5)) > true ) {
     		feed.set(ShootPower);
-    	}
+    	} 
     	else {
     		feed.set(0);
     	}
