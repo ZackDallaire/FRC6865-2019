@@ -69,6 +69,7 @@ private final double deadZone = 0.05;
     public void autonomousInit() {
         // This is called once when the robot first enters autonomous mode
     	mode = (int) autoCommand.getSelected();
+    	
     }
 
     @Override
@@ -78,7 +79,14 @@ private final double deadZone = 0.05;
     	case 1;
     	
     	}
-    	
+    	/*
+    	 * This is a template to what we could do with autonoumous.
+    	if (case 1 = TRUE) {
+    		move.arcadeDrive(1,1);
+    		Time(5 seconds);
+    		move.arcadeDrive(0,0);
+    	}
+    	*/
     	
     }
 
