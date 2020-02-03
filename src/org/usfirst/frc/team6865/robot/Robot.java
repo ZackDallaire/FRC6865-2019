@@ -52,10 +52,10 @@ private final double deadZone = 0.05;
     	
     	// Camera USB
     	CameraServer.getInstance().startAutomaticCapture();
-    	chooser = new SendableChooser();
-    	chooser.adddefault("Command 1", 1);
-    	chooser.addObject("Command 2", 2);
-    	SmartDashboard.putData("Autonomos Selector", chooser);
+    	autoCommand = new SendableChooser();
+    	autoCommand.addDefault("Command 1", 1);
+    	autoCommand.addObject("Command 2", 2);
+    	SmartDashboard.putData("Autonomos Selector", autoCommand);
     }
 
     @Override
@@ -68,15 +68,15 @@ private final double deadZone = 0.05;
     @Override
     public void autonomousInit() {
         // This is called once when the robot first enters autonomous mode
-    	mode = (int) chooser.getSelected();
+    	mode = (int) autoCommand.getSelected();
     }
 
     @Override
     public void autonomousPeriodic() {
         // This is called periodically while the robot is in autonomous mode
-    	switch(mode) {
+    	switch(mode){
     	case 1;
-    	....
+    	
     	}
     	
     	
