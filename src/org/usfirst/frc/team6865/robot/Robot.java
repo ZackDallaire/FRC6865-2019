@@ -24,6 +24,11 @@ public class Robot extends TimedRobot {
 public Spark shoot = new Spark (1);
 public Spark Intake = new Spark (2);
 public Spark DriverPower = new Spark (3);
+public Talon DrivePower = new Talon (3);
+public Talon Climb = new Talon (4);
+
+  private int mode =1;// initialize default mode
+private SendableChooser autoCommand;
 
 
 // Set Joy sticks 
@@ -47,7 +52,10 @@ private final double deadZone = 0.05;
     	
     	// Camera USB
     	CameraServer.getInstance().startAutomaticCapture();
-    	
+    	autoCommand = new SendableChooser();
+    	autoCommand.addDefault("Command 1", 1);
+    	autoCommand.addObject("Command 2", 2);
+    	SmartDashboard.putData("Autonomos Selector", autoCommand);
     }
 
     @Override
@@ -60,11 +68,25 @@ private final double deadZone = 0.05;
     @Override
     public void autonomousInit() {
         // This is called once when the robot first enters autonomous mode
+    	mode = (int) autoCommand.getSelected();
+    	
     }
 
     @Override
     public void autonomousPeriodic() {
         // This is called periodically while the robot is in autonomous mode
+    	switch(mode){
+    	case 1;
+    	
+    	}
+    	/*
+    	 * This is a template to what we could do with autonoumous.
+    	if (case 1 = TRUE) {
+    		move.arcadeDrive(1,1);
+    		Time(5 seconds);
+    		move.arcadeDrive(0,0);
+    	}
+    	*/
     	
     }
 
@@ -78,9 +100,14 @@ private final double deadZone = 0.05;
     public void teleopPeriodic() {
         // This is called periodically while the robot is in teleopreated mode
     	
+
     	double driverPower = SmartDashboard.getNumber('DriverPower',0.7);
+
+    	double DrivePower = SmartDashboard.getNumber('DriverPower',0.7);
+
     	double shootPower = SmartDashboard.getNumber('ShootPower', 0.9);
     	double intakePower = SmartDashboard.getNumber('IntakePower',0.9);
+    	double ClimbPower = SmartDashboard.getNumber('ClimbPower',0.9);
     	
     	// Insert Saftys once we know what were doing
     	
@@ -95,7 +122,7 @@ private final double deadZone = 0.05;
     		
     		if(Math.abs(xBox.getRawButton(5)) > true ) {
     		feed.set(ShootPower);
-    	}
+    	} 
     	else {
     		feed.set(0);
     	}
@@ -105,6 +132,12 @@ private final double deadZone = 0.05;
     		}else {
     			feed.set(0);
     		}
+    		// Climbing if we get the chance
+    	if (Math.abs(xBox.get3)) {
+    		feed.set(ClimbPower);
+    	}else {
+    		feed.set(0);
+    	}
     	
     	}// End of the drive base.
     	
@@ -122,3 +155,5 @@ private final double deadZone = 0.05;
     }
 
 }
+
+// any Ideas that you think that should be in this please put it in the discord.
