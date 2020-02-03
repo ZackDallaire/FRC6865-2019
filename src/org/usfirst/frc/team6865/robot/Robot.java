@@ -23,12 +23,12 @@ public class Robot extends TimedRobot {
 // Please change the number below once we know which one we are using.
 public Spark shoot = new Spark (1);
 public Spark Intake = new Spark (2);
+public Spark DriverPower = new Spark (3);
 public Talon DrivePower = new Talon (3);
 public Talon Climb = new Talon (4);
-private int mode =1;// initialize default mode
+
+  private int mode =1;// initialize default mode
 private SendableChooser autoCommand;
-
-
 
 
 // Set Joy sticks 
@@ -100,7 +100,11 @@ private final double deadZone = 0.05;
     public void teleopPeriodic() {
         // This is called periodically while the robot is in teleopreated mode
     	
+
+    	double driverPower = SmartDashboard.getNumber('DriverPower',0.7);
+
     	double DrivePower = SmartDashboard.getNumber('DriverPower',0.7);
+
     	double shootPower = SmartDashboard.getNumber('ShootPower', 0.9);
     	double intakePower = SmartDashboard.getNumber('IntakePower',0.9);
     	double ClimbPower = SmartDashboard.getNumber('ClimbPower',0.9);
