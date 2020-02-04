@@ -86,6 +86,10 @@ private final double deadZone = 0.05;
     		Time(5 seconds);
     		move.arcadeDrive(0,0);
     	}
+    	if(case 2 = TRUE {
+    	move.arcadeDrive(-5,-5);
+    	move.arcadeDrive(0,0);
+    	}
     	*/
     	
     }
