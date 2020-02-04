@@ -75,10 +75,9 @@ private final double deadZone = 0.05;
     @Override
     public void autonomousPeriodic() {
         // This is called periodically while the robot is in autonomous mode
-    	switch(mode){
-    	case 1;
-    	
-    	}
+    	if (mode == 1) {
+    		case = 1;
+		}
     	/*
     	 * This is a template to what we could do with autonoumous.
     	if (case 1 = TRUE) {
