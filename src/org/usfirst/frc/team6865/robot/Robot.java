@@ -53,8 +53,8 @@ private final double deadZone = 0.05;
     	// Camera USB
     	CameraServer.getInstance().startAutomaticCapture();
     	autoCommand = new SendableChooser();
-    	autoCommand.addDefault("Command 1", 1);
-    	autoCommand.addObject("Command 2", 2);
+    	autoCommand.addDefault("Command 1", One);
+    	autoCommand.addObject("Command 2", Two);
     	SmartDashboard.putData("Autonomos Selector", autoCommand);
     }
 
@@ -75,17 +75,20 @@ private final double deadZone = 0.05;
     @Override
     public void autonomousPeriodic() {
         // This is called periodically while the robot is in autonomous mode
+    	int One;
+    	One = false;
+    	
     	if (mode == 1) {
     		case = 1;
 		}
     	/*
     	 * This is a template to what we could do with autonomous.
-    	if (case 1 = TRUE) {
+    	if (case 1 = true) {
     		move.arcadeDrive(1,1);
     		Time(5 seconds);
     		move.arcadeDrive(0,0);
     	}
-    	if(case 2 = TRUE {
+    	if(case 2 = true {
     	move.arcadeDrive(-5,-5);
     	move.arcadeDrive(0,0);
     	}
