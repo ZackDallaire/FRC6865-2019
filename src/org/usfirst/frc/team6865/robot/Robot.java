@@ -7,6 +7,11 @@
 
 package org.usfirst.frc.team6865.robot;
 
+/*
+ * Please not that this code is still in beta and we don't know if this will actually work yet
+ * waiting on robot
+ */
+
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
