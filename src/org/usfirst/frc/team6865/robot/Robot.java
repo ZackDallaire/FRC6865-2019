@@ -41,7 +41,7 @@ private Joystick xBox = new Joystick(0);
 
 private final double deadZone = 0.05;
 
-// talon motor stuff
+// Talon motor stuff
 
 
 
