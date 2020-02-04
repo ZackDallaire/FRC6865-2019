@@ -79,7 +79,7 @@ private final double deadZone = 0.05;
     		case = 1;
 		}
     	/*
-    	 * This is a template to what we could do with autonoumous.
+    	 * This is a template to what we could do with autonomous.
     	if (case 1 = TRUE) {
     		move.arcadeDrive(1,1);
     		Time(5 seconds);
