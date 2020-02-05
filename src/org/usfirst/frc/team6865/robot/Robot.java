@@ -33,6 +33,8 @@ public Talon DriverPower = new Talon (3);
 
 public Talon Climb = new Talon (4);
 
+public Spark Polocord = new Spark (5);
+
   private int mode =1;// initialize default mode
 private SendableChooser autoCommand;
 
@@ -118,6 +120,7 @@ private final double deadZone = 0.05;
     	double shootPower = SmartDashboard.getNumber('ShootPower', 0.9);
     	double intakePower = SmartDashboard.getNumber('IntakePower',0.9);
     	double ClimbPower = SmartDashboard.getNumber('ClimbPower',0.9);
+    	double Polocord = SmartDashboard.getNumber('Polocord',0.6);
     	
     	// Insert Saftys once we know what were doing
     	
@@ -148,6 +151,11 @@ private final double deadZone = 0.05;
     	}else {
     		feed.set(0);
     	}
+    	
+    	if (Math.abs(xBox.get0)) {
+    		feed.set(Polocord);
+    	}else
+    	{feed.set(0);
     	
     	}// End of the drive base.
     	
