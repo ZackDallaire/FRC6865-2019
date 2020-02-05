@@ -154,9 +154,9 @@ private final double deadZone = 0.05;
     	
     	if (Math.abs(xBox.get0)) {
     		feed.set(Polocord);
-    	}else
-    	{feed.set(0);
-    	
+    	}else {
+    	feed.set(0);
+    	}
     	}// End of the drive base.
     	
     	
