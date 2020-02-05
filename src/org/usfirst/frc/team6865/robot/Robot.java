@@ -176,4 +176,4 @@ private final double deadZone = 0.05;
 
 }
 
-// any Ideas that you think that should be in this please put it in the discord.
+// any Ideas that you think that should be in this please put it in the discord or in the github issues page.
