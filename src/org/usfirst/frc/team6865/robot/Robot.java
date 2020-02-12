@@ -8,8 +8,12 @@
 package org.usfirst.frc.team6865.robot;
 
 /*
+ * DISCLAIMER
  * Please not that this code is still in beta and we don't know if this will actually work yet
  * waiting on robot
+ * 
+ * Testing should start sometime this week.
+ * 
  * Made by Zachary Dallaire
  * 
  * Original name of the robots wifi network was Robots in Disguise 
@@ -97,6 +101,7 @@ private final double deadZone = 0.05;
     	
     	if (mode == 1) {
     		case = 1;
+    		
 		}
     	/*
     	 * This is a template to what we could do with autonomous.
