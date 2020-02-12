@@ -85,6 +85,11 @@ private final double deadZone = 0.05;
     @Override
     public void autonomousPeriodic() {
         // This is called periodically while the robot is in autonomous mode
+    	double DrivePower = SmartDashboard.getNumber('DriverPower', 0.7);
+    	double shootPower = SmartDashboard.getNumber('ShootPower',0.9);
+    	
+    	
+    	
     	int One;
     	One = false;
     	
