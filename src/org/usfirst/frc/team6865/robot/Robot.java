@@ -87,7 +87,9 @@ private final double deadZone = 0.05;
         // This is called periodically while the robot is in autonomous mode
     	double DrivePower = SmartDashboard.getNumber('DriverPower', 0.7);
     	double shootPower = SmartDashboard.getNumber('ShootPower',0.9);
-    	
+    	double intakePower = SmartDashboard.getNumber('IntakePower',0.9);
+    	double ClimbPower = SmartDashboard.getNumber('ClimbPower',0.9);
+    	double Polocord = SmartDashboard.getNumber('Polocord',0.6);
     	
     	
     	int One;
