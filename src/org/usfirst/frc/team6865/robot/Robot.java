@@ -166,7 +166,7 @@ private final double deadZone = 0.05;
     	}else {
     		feed.set(0);
     	}
-    	// This is for the Polycord to bring the power cells into the shoot 
+    	// This is for the Poly cord to bring the power cells into the shoot 
     	if (Math.abs(xBox.get0)) {
     		feed.set(Polocord);
     	}else {
