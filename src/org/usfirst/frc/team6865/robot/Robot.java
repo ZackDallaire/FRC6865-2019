@@ -42,6 +42,7 @@ public Talon Climb = new Talon (4);
 public Spark Polocord = new Spark (5);
 
   private int mode =1;// initialize default mode
+@SuppressWarnings("rawtypes")
 private SendableChooser autoCommand;
 
 
