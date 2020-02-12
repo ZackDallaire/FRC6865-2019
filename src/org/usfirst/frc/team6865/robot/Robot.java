@@ -108,13 +108,13 @@ private final double deadZone = 0.05;
 
     @Override
     public void teleopInit() {
-        // This is called once when the robot first enters teleoperated mode
+        // This is called once when the robot first enters tele operated mode
     	
     }
 
     @Override
     public void teleopPeriodic() {
-        // This is called periodically while the robot is in teleopreated mode
+        // This is called periodically while the robot is in tele operated mode
     	
 
     	double DrivePower = SmartDashboard.getNumber('DriverPower',0.7);
@@ -153,7 +153,7 @@ private final double deadZone = 0.05;
     	}else {
     		feed.set(0);
     	}
-    	
+    	// This is for the Polycord to bring the power cells into the shoot 
     	if (Math.abs(xBox.get0)) {
     		feed.set(Polocord);
     	}else {
