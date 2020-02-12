@@ -63,8 +63,8 @@ private final double deadZone = 0.05;
     	// Camera USB
     	CameraServer.getInstance().startAutomaticCapture();
     	autoCommand = new SendableChooser();
-    	autoCommand.addDefault("Command 1", One);
-    	autoCommand.addObject("Command 2", Two);
+    	autoCommand.addDefault("Command 1", 1);
+    	autoCommand.addObject("Command 2", 2);
     	SmartDashboard.putData("Autonomos Selector", autoCommand);
     }
 
@@ -167,6 +167,7 @@ private final double deadZone = 0.05;
     @Override
     public void testInit() {
         // This is called once when the robot enters test mode
+
     }
 
     @Override
