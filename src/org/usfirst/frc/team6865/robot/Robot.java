@@ -35,7 +35,7 @@ public class Robot extends TimedRobot {
 // Please change the number below once we know which one we are using.
 public Spark shoot = new Spark (1);
 public Spark Intake = new Spark (2);
-public Talon DriverPower = new Talon (3);
+public Spark DriverPower = new Spark (3);
 
 public Talon Climb = new Talon (4);
 
@@ -60,7 +60,8 @@ private final double deadZone = 0.05;
 
 
 
-    @Override
+    @SuppressWarnings("unchecked")
+	@Override
     public void robotInit() {
         // This is called once when the robot code initializes
     	SmartDashboard.putNumber("DrivePower",0.82);
@@ -89,7 +90,9 @@ private final double deadZone = 0.05;
 
     @Override
     public void autonomousPeriodic() {
-        // This is called periodically while the robot is in autonomous mode
+       
+    	// This is called periodically while the robot is in autonomous mode
+    	@Override
     	double DrivePower = SmartDashboard.getNumber('DriverPower', 0.7);
     	double shootPower = SmartDashboard.getNumber('ShootPower',0.9);
     	double intakePower = SmartDashboard.getNumber('IntakePower',0.9);
@@ -129,15 +132,15 @@ private final double deadZone = 0.05;
     public void teleopPeriodic() {
         // This is called periodically while the robot is in tele operated mode
     	
-
-    	double DrivePower = SmartDashboard.getNumber('DriverPower',0.7);
+@supresswarning 
+    	double DrivePower = SmartDashboard.getNumber('DriverPower' 0.7);
 
     	double shootPower = SmartDashboard.getNumber('ShootPower', 0.9);
     	double intakePower = SmartDashboard.getNumber('IntakePower',0.9);
     	double ClimbPower = SmartDashboard.getNumber('ClimbPower',0.9);
     	double Polocord = SmartDashboard.getNumber('Polocord',0.6);
     	
-    	// Insert Saftys once we know what were doing
+    	// Insert Safetys once we know what were doing
     	
     	feed.setSafetyEnabled(false);
     	
