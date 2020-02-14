@@ -33,13 +33,13 @@ import edu.wpi.first.wpilibj.Talon;
 
 public class Robot extends TimedRobot {
 // Please change the number below once we know which one we are using.
-public Spark shoot = new Spark (1);
-public Spark Intake = new Spark (2);
-public Spark DriverPower = new Spark (3);
+public Talon shoot = new Talon (1);
+public edu.wpi.first.wpilibj.Talon intake = new Talon (2);
+public edu.wpi.first.wpilibj.Talon DriverPower = new Talon (3);
 
-public Talon Climb = new Talon (4);
+//public Talon Climb = new Talon (4);
 
-public Spark Polocord = new Spark (5);
+public Talon Polocord = new Talon (5);
 
   private int mode =1;// initialize default mode
 @SuppressWarnings("rawtypes")
@@ -96,7 +96,7 @@ private final double deadZone = 0.05;
     	double DrivePower = SmartDashboard.getNumber('DriverPower', 0.7);
     	double shootPower = SmartDashboard.getNumber('ShootPower',0.9);
     	double intakePower = SmartDashboard.getNumber('IntakePower',0.9);
-    	double ClimbPower = SmartDashboard.getNumber('ClimbPower',0.9);
+    	//double ClimbPower = SmartDashboard.getNumber('ClimbPower',0.9);
     	double Polocord = SmartDashboard.getNumber('Polocord',0.6);
     	
     	
@@ -137,7 +137,7 @@ private final double deadZone = 0.05;
 
     	double shootPower = SmartDashboard.getNumber('ShootPower', 0.9);
     	double intakePower = SmartDashboard.getNumber('IntakePower',0.9);
-    	double ClimbPower = SmartDashboard.getNumber('ClimbPower',0.9);
+    	//double ClimbPower = SmartDashboard.getNumber('ClimbPower',0.9);
     	double Polocord = SmartDashboard.getNumber('Polocord',0.6);
     	
     	// Insert Safetys once we know what were doing
@@ -164,11 +164,11 @@ private final double deadZone = 0.05;
     			feed.set(0);
     		}
     		// Climbing if we get the chance
-    	if (Math.abs(xBox.get3)) {
+    	/*if (Math.abs(xBox.get3)) {
     		feed.set(ClimbPower);
     	}else {
     		feed.set(0);
-    	}
+    	*/}
     	// This is for the Poly cord to bring the power cells into the shoot 
     	if (Math.abs(xBox.get0)) {
     		feed.set(Polocord);
