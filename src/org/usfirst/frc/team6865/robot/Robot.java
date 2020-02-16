@@ -58,9 +58,10 @@ private final double deadZone = 0.05;
 
 // Talon motor stuff
 
+// Drive Stuff
+private  DifferentialDrive move = new DifferentialDrive(new Talon(0),new Talon(1));
 
-
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
     public void robotInit() {
         // This is called once when the robot code initializes
