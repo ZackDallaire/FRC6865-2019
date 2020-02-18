@@ -14,7 +14,7 @@ package org.usfirst.frc.team6865.robot;
  * 
  * Testing should start sometime this week.
  * 
- * Made by Zachary Dallaire
+ * Made by Zachary Dallaire, and Ben
  * 
  * Original name of the robots wifi network was Robots in Disguise 
  */
