@@ -164,7 +164,7 @@ private  DifferentialDrive move = new DifferentialDrive(new Talon(0),new Talon(1
     		feed.set(0);
     	}
     		// Intake controls
-    		if (Math.abs(xBox.get4)) {
+    		if (Math.abs(xBox.getRawButton4)) {
     			feed.set(IntakePower);
     		}else {
     			feed.set(0);
@@ -176,7 +176,7 @@ private  DifferentialDrive move = new DifferentialDrive(new Talon(0),new Talon(1
     		feed.set(0);
     	*/}
     	// This is for the Poly cord to bring the power cells into the shoot 
-    	if (Math.abs(xBox.get0)) {
+    	if (Math.abs(xBox.getRawButton0)) {
     		feed.set(Polocord);
     	}else {
     	feed.set(0);
