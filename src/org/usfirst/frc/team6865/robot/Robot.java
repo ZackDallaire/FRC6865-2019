@@ -65,14 +65,19 @@ private  DifferentialDrive move = new DifferentialDrive(new Talon(0),new Talon(1
 	@Override
     public void robotInit() {
         // This is called once when the robot code initializes
-    	SmartDashboard.putNumber("DrivePower",0.82);
-    	
+    	SmartDashboard.putNumber("DriverPower",0.82);
+    	SmartDashboard.putNumber("ShootPower,",0.9);
+    	SmartDashboard.putNumber("IntakePower",0.9);
     	// Camera USB
     	CameraServer.getInstance().startAutomaticCapture();
+    	// Code for new stuff
+    	
     	autoCommand = new SendableChooser();
     	autoCommand.addDefault("Command 1", 1);
     	autoCommand.addObject("Command 2", 2);
     	SmartDashboard.putData("Autonomos Selector", autoCommand);
+    	
+    	
     }
 
     @Override
@@ -93,15 +98,15 @@ private  DifferentialDrive move = new DifferentialDrive(new Talon(0),new Talon(1
     public void autonomousPeriodic() {
        
     	// This is called periodically while the robot is in autonomous mode
-    	@Override
-    	double DrivePower = SmartDashboard.getNumber('DriverPower', 0.7);
-    	double shootPower = SmartDashboard.getNumber('ShootPower',0.9);
-    	double intakePower = SmartDashboard.getNumber('IntakePower',0.9);
+    	// This is for later when we program Autonomous 
+    	double DrivePower = SmartDashboard.getNumber("DriverPower", 0.7);
+    	double shootPower = SmartDashboard.getNumber("ShootPower",0.9);
+    	double intakePower = SmartDashboard.getNumber("IntakePower",0.9);
     	//double ClimbPower = SmartDashboard.getNumber('ClimbPower',0.9);
-    	double Polocord = SmartDashboard.getNumber('Polocord',0.6);
+    	double Polocord = SmartDashboard.getNumber("Polocord",0.6);
     	
     	
-    	int One;
+    	/*int One;
     	One = false;
     	
     	if (mode == 1) {
@@ -146,7 +151,7 @@ private  DifferentialDrive move = new DifferentialDrive(new Talon(0),new Talon(1
     	feed.setSafetyEnabled(false);
     	
     	if(Math.abs(bigJ.getY()) > deadZone || Math.abs(bigJ.getX()) > deadZone) {
-    		move.arcadeDrive(bigJ.getY()*drivePower,bigJ.getX()*drivePower);
+    		move.arcadeDrive(bigJ.getY()*DriverPower,bigJ.getX()*drivePower);
     	}
     	else {
     		move.arcadeDrive(0,0,);
