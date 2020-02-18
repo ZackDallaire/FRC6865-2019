@@ -37,7 +37,7 @@ public Talon shoot = new Talon (1);
 public edu.wpi.first.wpilibj.Talon intake = new Talon (2);
 public edu.wpi.first.wpilibj.Talon DriverPower = new Talon (3);
 //public Talon Climb = new Talon (4);
-public Talon Polocord = new Talon (5);698
+public Talon Polocord = new Talon (5);
 
 
   private int mode =1;// initialize default mode
