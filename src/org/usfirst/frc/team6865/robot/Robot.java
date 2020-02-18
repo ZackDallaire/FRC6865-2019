@@ -179,7 +179,7 @@ private  DifferentialDrive move = new DifferentialDrive(new Talon(0),new Talon(1
     	}// End of the drive base.
     	
     	
-    }
+    
 
     @Override
     public void testInit() {
