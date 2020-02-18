@@ -111,12 +111,13 @@ private  DifferentialDrive move = new DifferentialDrive(new Talon(0),new Talon(1
        
     	// This is called periodically while the robot is in autonomous mode
     	// This is for later when we program Autonomous 
+    	/*
     	double DrivePower = SmartDashboard.getNumber("DriverPower", 0.7);
     	double shootPower = SmartDashboard.getNumber("ShootPower",0.9);
     	double intakePower = SmartDashboard.getNumber("IntakePower",0.9);
     	//double ClimbPower = SmartDashboard.getNumber('ClimbPower',0.9);
     	double Polocord = SmartDashboard.getNumber("Polocord",0.6);
-    	
+    	*/
     	
     	/*int One;
     	One = false;
@@ -163,7 +164,9 @@ private  DifferentialDrive move = new DifferentialDrive(new Talon(0),new Talon(1
     	feed.setSafetyEnabled(false);
     	DrivePower.setSafetyEnabled(false);
     	IntakePower.setSafetyEnabled(false);
-    	
+    	ShootPower.setSafetyEnabled(false);
+    	Polocord.setSafetyEnabled(false);
+    	// driving
     	if(Math.abs(bigJ.getY()) > deadZone || Math.abs(bigJ.getX()) > deadZone) {
     		move.arcadeDrive(bigJ.getY()*DriverPower,bigJ.getX()*drivePower);
     	}
@@ -177,7 +180,7 @@ private  DifferentialDrive move = new DifferentialDrive(new Talon(0),new Talon(1
     		feed.set(ShootPower);
     	} 
     	else {
-    		feed.set(0);
+    		ShootPower.set(0);
     	}
     		
     		
@@ -185,7 +188,7 @@ private  DifferentialDrive move = new DifferentialDrive(new Talon(0),new Talon(1
     		if (Math.abs(xBox.getRawButton4)) {
     			feed.set(IntakePower);
     		}else {
-    			feed.set(0);
+    			IntakePower.set(0);
     		}
     		
     		
@@ -199,7 +202,7 @@ private  DifferentialDrive move = new DifferentialDrive(new Talon(0),new Talon(1
     	if (Math.abs(xBox.getRawButton0)) {
     		feed.set(Polocord);
     	}else {
-    	feed.set(0);
+    	PoloCord.set(0);
     	}
     	}// End of the drive base.
     	
