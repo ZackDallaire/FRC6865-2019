@@ -36,14 +36,16 @@ public class Robot extends TimedRobot {
 public Talon shoot = new Talon (1);
 public edu.wpi.first.wpilibj.Talon intake = new Talon (2);
 public edu.wpi.first.wpilibj.Talon DriverPower = new Talon (3);
-
 //public Talon Climb = new Talon (4);
-
 public Talon Polocord = new Talon (5);
+
 
   private int mode =1;// initialize default mode
 @SuppressWarnings("rawtypes")
 private SendableChooser autoCommand;
+
+// Timer 
+public Timer time = new Timer();
 
 
 // Set Joy sticks 
@@ -52,11 +54,16 @@ private Joystick bigJ = new Joystick(1);
 private Joystick xBox = new Joystick(0);
 
 
+
+
 // Set Constants
 
 private final double deadZone = 0.05;
 
 // Talon motor stuff
+
+
+
 
 // Drive Stuff
 private  DifferentialDrive move = new DifferentialDrive(new Talon(0),new Talon(1));
@@ -68,9 +75,14 @@ private  DifferentialDrive move = new DifferentialDrive(new Talon(0),new Talon(1
     	SmartDashboard.putNumber("DriverPower",0.82);
     	SmartDashboard.putNumber("ShootPower,",0.9);
     	SmartDashboard.putNumber("IntakePower",0.9);
+    	SmartDashboard.putNumber("Polycord",0.6);
+    
+    	
     	// Camera USB
     	CameraServer.getInstance().startAutomaticCapture();
     	// Code for new stuff
+    	
+    
     	
     	autoCommand = new SendableChooser();
     	autoCommand.addDefault("Command 1", 1);
@@ -138,7 +150,7 @@ private  DifferentialDrive move = new DifferentialDrive(new Talon(0),new Talon(1
     public void teleopPeriodic() {
         // This is called periodically while the robot is in tele operated mode
     	
-@supresswarning 
+ 
     	double DrivePower = SmartDashboard.getNumber('DriverPower' 0.7);
 
     	double shootPower = SmartDashboard.getNumber('ShootPower', 0.9);
@@ -149,13 +161,17 @@ private  DifferentialDrive move = new DifferentialDrive(new Talon(0),new Talon(1
     	// Insert Safetys once we know what were doing
     	
     	feed.setSafetyEnabled(false);
+    	DrivePower.setSafetyEnabled(false);
+    	IntakePower.setSafetyEnabled(false);
     	
     	if(Math.abs(bigJ.getY()) > deadZone || Math.abs(bigJ.getX()) > deadZone) {
     		move.arcadeDrive(bigJ.getY()*DriverPower,bigJ.getX()*drivePower);
     	}
     	else {
     		move.arcadeDrive(0,0,);
-    	// Shooter Controls are below this 
+    	
+    		
+    		// Shooter Controls are below this 
     		
     		if(Math.abs(xBox.getRawButton(5)) > true ) {
     		feed.set(ShootPower);
@@ -163,12 +179,16 @@ private  DifferentialDrive move = new DifferentialDrive(new Talon(0),new Talon(1
     	else {
     		feed.set(0);
     	}
+    		
+    		
     		// Intake controls
     		if (Math.abs(xBox.getRawButton4)) {
     			feed.set(IntakePower);
     		}else {
     			feed.set(0);
     		}
+    		
+    		
     		// Climbing if we get the chance
     	/*if (Math.abs(xBox.get3)) {
     		feed.set(ClimbPower);
