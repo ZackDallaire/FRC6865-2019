@@ -31,11 +31,11 @@ import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.Talon;
 
 
-public class Robot extends TimedRobot {
+public class Robot extends IterativeRobot {
 // Please change the number below once we know which one we are using.
 public Talon shoot = new Talon (1);
 public edu.wpi.first.wpilibj.Talon intake = new Talon (2);
-public edu.wpi.first.wpilibj.Talon DriverPower = new Talon (3);
+public edu.wpi.first.wpilibj.Talon DriverPower = new Talon (4);
 //public Talon Climb = new Talon (4);
 public Talon Polocord = new Talon (5);
 
@@ -152,7 +152,7 @@ private  DifferentialDrive move = new DifferentialDrive(new Talon(0),new Talon(1
         // This is called periodically while the robot is in tele operated mode
     	
  
-    	double DrivePower = SmartDashboard.getNumber('DriverPower' 0.7);
+    	//double DrivePower = SmartDashboard.getNumber('DriverPower' 0.7);
 
     	double shootPower = SmartDashboard.getNumber('ShootPower', 0.9);
     	double intakePower = SmartDashboard.getNumber('IntakePower',0.9);
