@@ -13,6 +13,7 @@ import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.Timer;
+import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.drive.DifferentialDrive;
 import edu.wpi.first.wpilibj.Spark;
 import edu.wpi.first.wpilibj.Joystick;
@@ -32,12 +33,17 @@ public class Robot extends IterativeRobot {
 	private String m_autoSelected;
 	private SendableChooser<String> m_chooser = new SendableChooser<>();
 
-	public Talon shoot = new Talon (1);
-	public edu.wpi.first.wpilibj.Talon intake = new Talon (2);
-	public edu.wpi.first.wpilibj.Talon DriverPower = new Talon (4);
+	private Talon shootPower = new Talon (1);
+	private edu.wpi.first.wpilibj.Talon intake = new Talon (2);
+	private edu.wpi.first.wpilibj.Talon DriverPower = new Talon (4);
 	//public Talon Climb = new Talon (4);
-	public Talon Polocord = new Talon (5);
-	
+	private Talon Polocord = new Talon (5);
+	Talon leftDrive = new Talon(1);
+	Talon rightDrive = new Talon(2);
+	/*
+	 * Spark rightDrive1 = new Spark(3);
+	 * Spark rightDrive2 = new Spark(4);
+	 */
 	
 	
 	// Set Joysticks
@@ -100,6 +106,9 @@ public class Robot extends IterativeRobot {
 	/**
 	 * This function is called periodically during autonomous.
 	 */
+	
+
+	
 	@Override
 	public void autonomousPeriodic() {
 		switch (m_autoSelected) {
@@ -113,16 +122,23 @@ public class Robot extends IterativeRobot {
 		}
 	}
 
+
+	
+
+	
+	
 	/**
 	 * This function is called periodically during operator control.
 	 */
 	@Override
 	public void teleopPeriodic() {
-		double feed = SmartDashboard.getNumber("feed",0.0);
-		double DrivePower = SmartDashboard.getNumber("DrivePower", 0.7);
-		double shootPower = SmartDashboard.getNumber("ShootPower",0.9);
-		double intakePower = SmartDashboard.getNumber("IntakePower",0.9);
-		double Polycord = SmartDashboard.getNumber("Polocord",0.6);
+    	double DrivePower = SmartDashboard.getNumber("DriverPower", 0.7);
+
+    	double shootPower = SmartDashboard.getNumber("ShootPower", 0.9);
+    	double intakePower = SmartDashboard.getNumber("IntakePower",0.9);
+    	//double ClimbPower = SmartDashboard.getNumber('ClimbPower',0.9);
+    	double Polocord = SmartDashboard.getNumber("Polocord",0.6);
+    	
 		
 		// SAFETYS DISABLED OF COURSE
 	
@@ -130,23 +146,20 @@ public class Robot extends IterativeRobot {
 		
 		// Driving Script
 		
-    	if(Math.abs(bigJ.getY()) > deadZone || Math.abs(bigJ.getX()) > deadZone) {
-    		move.arcadeDrive(bigJ.getY()*DrivePower,bigJ.getX()*DrivePower);
-    	}
-    	else {
-    		move.arcadeDrive(0,0);
-    	}
-    	
-    	//SHOOT SHOOT SHOOT
-    	
-    	if(Math.abs(xBox.getRawButton(5)) > true ) {
- 
-	}
+		
+		 if(Math.abs(bigJ.getY()) > deadZone || Math.abs(bigJ.getX()) > deadZone){
+		        move.arcadeDrive(bigJ.getY()*DrivePower, bigJ.getX()*DrivePower);
+		      } else {
+		    	  move.arcadeDrive(0,0);
+		      }
 
-	/**
-	 * This function is called periodically during test mode.
+	}}
+
+		
+
+	 /* This function is called periodically during test mode.
 	 */
-	@Override
-	public void testPeriodic() {
-	}
-}
+	//@Override
+//	public void testPeriodic() {
+	//}
+
