@@ -98,8 +98,8 @@ public class Robot extends IterativeRobot {
 	@Override
 	public void autonomousInit() {
 		m_autoSelected = m_chooser.getSelected();
-		// autoSelected = SmartDashboard.getString("Auto Selector",
-		// defaultAuto);
+		 m_autoSelected = SmartDashboard.getString("Auto Selector",
+		 kDefaultAuto);
 		System.out.println("Auto selected: " + m_autoSelected);
 	}
 
@@ -132,12 +132,13 @@ public class Robot extends IterativeRobot {
 	 */
 	@Override
 	public void teleopPeriodic() {
-    	double DrivePower = SmartDashboard.getNumber("DriverPower", 0.7);
+    	
+		double DrivePower = SmartDashboard.getNumber("DriverPower", 0.7);
 
     	double shootPower = SmartDashboard.getNumber("ShootPower", 0.9);
     	double intakePower = SmartDashboard.getNumber("IntakePower",0.9);
     	//double ClimbPower = SmartDashboard.getNumber('ClimbPower',0.9);
-    	double Polocord = SmartDashboard.getNumber("Polocord",0.6);
+    	double polocord = SmartDashboard.getNumber("Polocord",0.6);
     	
 		
 		// SAFETYS DISABLED OF COURSE
@@ -152,14 +153,28 @@ public class Robot extends IterativeRobot {
 		      } else {
 		    	  move.arcadeDrive(0,0);
 		      }
+		 // Shooter Controls
+		/* 
+		 if (xBox.getRawButton(5) == true) {
+			 shootPower.set( xBox.getRawButton(0)*shootPower);
+		 }
+		
+		 
+		 if(xBox.getRawButton(4) == true) {
+			 feed.set(intakePower);
+		 }
+		 if (xBox.getRawButton(0) == true) {
+			 polocord.set(Polocord);
+		 }
+		 */
 
-	}}
+	}
 
 		
 
 	 /* This function is called periodically during test mode.
 	 */
-	//@Override
-//	public void testPeriodic() {
-	//}
+	@Override
+	public void testPeriodic() {
+	}}
 
